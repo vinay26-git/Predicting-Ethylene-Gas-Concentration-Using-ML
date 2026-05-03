@@ -1,4 +1,4 @@
-# Predicting Ethylene Gas Concentration Using Machine Learning
+# Predicting Ethylene Gas Concentration Using ML
 
 This repository contains the code, notebooks, images, and documents for a minor project on **predicting ethylene (C₂H₄) gas concentration using machine learning** with multivariate gas sensor data. The project focuses on building an economical, accurate, and scalable predictive model using **polynomial regression**, along with robust data preprocessing and validation.
 
