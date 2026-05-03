@@ -50,7 +50,7 @@ The system takes analog readings from a gas sensor array (e.g., TGS2610, TGS2602
 - `images/`  
   Folder containing all figures used in the README:
   - `Pipeline.jpg`
-  - `system-architectre.jpg`
+  - `system-architectre.png`
   - `Project-Structure.jpg`
   - `Correlation-Heatmap.jpg`
   - `Data-Smoothing.jpg`
