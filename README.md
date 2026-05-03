@@ -14,7 +14,7 @@ Traditional gas detection systems are typically **threshold-based**, giving an a
 
 ### System Architecture
 
-![System architecture from sensors to prediction](images/system architectre.png)
+![System architecture from sensors to prediction](images/system_architectre.png)
 
 The system takes analog readings from a gas sensor array (e.g., TGS2610, TGS2602, TGS2600, TGS2620), feeds them to the trained machine-learning model, and outputs the predicted ethylene concentration in ppm.
 
@@ -49,23 +49,23 @@ The system takes analog readings from a gas sensor array (e.g., TGS2610, TGS2602
 
 - `images/`  
   Folder containing all figures used in the README:
-  - `Pipeline.jpg`
-  - `system-architectre.png`
-  - `Project-Structure.jpg`
-  - `Correlation-Heatmap.jpg`
-  - `Data-Smoothing.jpg`
-  - `Sensitivity-Plots.jpg`
-  - `Multi-Feature-Polynomial-Regressio.jpg`
-  - `Result.jpg`
-  - `Work-Flow-Diagram.jpg`
+  - `Pipeline.png`
+  - `system_architectre.png`
+  - `Project Structure.png`
+  - `Correlation Heatmap.png`
+  - `Data Smoothing.png`
+  - `Sensitivity Plots.png`
+  - `MultiFeature Polynomial Regressio.png`
+  - `Result.png`
+  - `Work Flow Diagram.png`
 
 > Note: Some notebooks appear in duplicate (e.g., `1.Outlier_Removal.ipynb`, `Multi_Feature_Polynomial_Regression.ipynb`) due to multiple exports; you can keep a single canonical copy of each before pushing to Git.
 
 ### Project Workflow Between Notebooks
 
-![Project notebook structure and data flow](images/Project-Structure.jpg)
+![Project notebook structure and data flow](images/Project Structure.png)
 
-This diagram shows how raw CSV data flows through the notebooks (outlier removal, smoothing, correlation analysis, model training, cross-validation, sensitivity plots) and ends with a saved model file (e.g., `ethylene_polynomial.pkl`).
+This diagram shows how raw CSV data flows through the notebooks (outlier removal, smoothing, correlation analysis, model training, cross validation, sensitivity plots) and ends with a saved model file (e.g., `ethylene_polynomial.pkl`).
 
 ## Methodology
 
@@ -73,7 +73,7 @@ The end‑to‑end pipeline follows a standard supervised ML workflow tailored t
 
 ### Overall ML Pipeline
 
-![End-to-end pipeline](images/Pipeline.jpg)
+![End-to-end pipeline](images/Pipeline.png)
 
 1. **Data Acquisition & EDA**  
    - Load multivariate readings from MOS/Taguchi gas sensors along with reference ethylene concentration (ppm).  
@@ -88,7 +88,7 @@ The end‑to‑end pipeline follows a standard supervised ML workflow tailored t
 
 #### Example of Data Smoothing
 
-![Raw vs smoothed sensor signal](images/Data-Smoothing.jpg)
+![Raw vs smoothed sensor signal](images/Data-Smoothing.png)
 
 3. **Feature Engineering**  
    - Select the most informative sensor channels based on correlation with the target and redundancy between sensors.  
@@ -96,7 +96,7 @@ The end‑to‑end pipeline follows a standard supervised ML workflow tailored t
 
 #### Correlation Heatmap of Features
 
-![Correlation heatmap of sensor features and target](images/Correlation-Heatmap.jpg)
+![Correlation heatmap of sensor features and target](images/Correlation_Heatmap.png)
 
 4. **Model Development**  
    - Use **polynomial regression** (implemented via scikit‑learn’s polynomial features + linear regression) as the core model.  
@@ -105,7 +105,7 @@ The end‑to‑end pipeline follows a standard supervised ML workflow tailored t
 
 #### Polynomial Regression Pipeline
 
-![StandardScaler + PolynomialFeatures + LinearRegression pipeline](images/Multi-Feature-Polynomial-Regressio.jpg)
+![StandardScaler + PolynomialFeatures + LinearRegression pipeline](images/Multi-Feature-Polynomial-Regressio.png)
 
 5. **Validation & Performance Metrics**  
    - Evaluate using **K‑fold cross-validation** to obtain robust performance estimates on unseen data.  
@@ -118,7 +118,7 @@ The end‑to‑end pipeline follows a standard supervised ML workflow tailored t
 
 #### Actual vs Fitted Distribution
 
-![Distribution of actual vs fitted ethylene concentration](images/Result.jpg)
+![Distribution of actual vs fitted ethylene concentration](images/Result.png)
 
 6. **Sensor Sensitivity Analysis**  
    - Generate sensitivity plots to study how each sensor’s normalized response varies with ethylene concentration.  
@@ -126,7 +126,7 @@ The end‑to‑end pipeline follows a standard supervised ML workflow tailored t
 
 #### Sensor Sensitivity to Ethylene Concentration
 
-![Sensitivity plot of TGS2620-3 sensor](images/Sensitivity-Plots.jpg)
+![Sensitivity plot of TGS2620-3 sensor](images/Sensitivity-Plots.png)
 
 7. **Model Export & Deployment Potential**  
    - Save the trained model (e.g., using `pickle`) for later use on new sensor readings.  
