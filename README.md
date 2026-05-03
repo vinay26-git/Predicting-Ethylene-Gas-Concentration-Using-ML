@@ -14,7 +14,7 @@ Traditional gas detection systems are typically **threshold-based**, giving an a
 
 ### System Architecture
 
-![System architecture from sensors to prediction](images/system-architectre.jpg)
+![System architecture from sensors to prediction](images/system-architectre.png)
 
 The system takes analog readings from a gas sensor array (e.g., TGS2610, TGS2602, TGS2600, TGS2620), feeds them to the trained machine-learning model, and outputs the predicted ethylene concentration in ppm.
 
