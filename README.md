@@ -29,13 +29,13 @@ The system takes analog readings from a gas sensor array (e.g., TGS2610, TGS2602
 - `Minor_Project.pdf`  
   Conference-style paper describing the system architecture, ML pipeline, and experimental results in a compact format.
 
-- `1.Outlier_Removal.ipynb`  
+- `Outlier_Removal.ipynb`  
   Jupyter notebook for detecting and removing outliers from the raw sensor dataset using statistical techniques (e.g., IQR-based filtering).
 
-- `2.Data_Smoothing.ipynb`  
+- `Data_Smoothing.ipynb`  
   Notebook for noise reduction and smoothing of sensor signals (e.g., Savitzky–Golay filtering) and preparing cleaned time series data.
 
-- `3.Correlation_Heatmap.ipynb`  
+- `Correlation_Heatmap.ipynb`  
   Notebook for exploratory data analysis (EDA), computing feature correlations, and visualizing correlation heatmaps to guide feature selection.
 
 - `Multi_Feature_Polynomial_Regression.ipynb`  
