@@ -14,7 +14,7 @@ Traditional gas detection systems are typically **threshold-based**, giving an a
 
 ### System Architecture
 
-![System architecture from sensors to prediction](images/system_architectre.png)
+![System architecture from sensors to prediction](images/systemarchitectre.png)
 
 The system takes analog readings from a gas sensor array (e.g., TGS2610, TGS2602, TGS2600, TGS2620), feeds them to the trained machine-learning model, and outputs the predicted ethylene concentration in ppm.
 
@@ -50,20 +50,20 @@ The system takes analog readings from a gas sensor array (e.g., TGS2610, TGS2602
 - `images/`  
   Folder containing all figures used in the README:
   - `Pipeline.png`
-  - `system_architectre.png`
-  - `Project Structure.png`
-  - `Correlation Heatmap.png`
-  - `Data Smoothing.png`
-  - `Sensitivity Plots.png`
-  - `MultiFeature Polynomial Regressio.png`
+  - `systemarchitectre.png`
+  - `ProjectStructure.png`
+  - `CorrelationHeatmap.png`
+  - `DataSmoothing.png`
+  - `SensitivityPlots.png`
+  - `MultiFeaturePolynomialRegressio.png`
   - `Result.png`
-  - `Work Flow Diagram.png`
+  - `WorkFlowDiagram.png`
 
 > Note: Some notebooks appear in duplicate (e.g., `1.Outlier_Removal.ipynb`, `Multi_Feature_Polynomial_Regression.ipynb`) due to multiple exports; you can keep a single canonical copy of each before pushing to Git.
 
 ### Project Workflow Between Notebooks
 
-![Project notebook structure and data flow](images/Project Structure.png)
+![Project notebook structure and data flow](images/ProjectStructure.png)
 
 This diagram shows how raw CSV data flows through the notebooks (outlier removal, smoothing, correlation analysis, model training, cross validation, sensitivity plots) and ends with a saved model file (e.g., `ethylene_polynomial.pkl`).
 
@@ -88,7 +88,7 @@ The end‑to‑end pipeline follows a standard supervised ML workflow tailored t
 
 #### Example of Data Smoothing
 
-![Raw vs smoothed sensor signal](images/Data-Smoothing.png)
+![Raw vs smoothed sensor signal](images/DataSmoothing.png)
 
 3. **Feature Engineering**  
    - Select the most informative sensor channels based on correlation with the target and redundancy between sensors.  
@@ -96,7 +96,7 @@ The end‑to‑end pipeline follows a standard supervised ML workflow tailored t
 
 #### Correlation Heatmap of Features
 
-![Correlation heatmap of sensor features and target](images/Correlation_Heatmap.png)
+![Correlation heatmap of sensor features and target](images/CorrelationHeatmap.png)
 
 4. **Model Development**  
    - Use **polynomial regression** (implemented via scikit‑learn’s polynomial features + linear regression) as the core model.  
@@ -105,7 +105,7 @@ The end‑to‑end pipeline follows a standard supervised ML workflow tailored t
 
 #### Polynomial Regression Pipeline
 
-![StandardScaler + PolynomialFeatures + LinearRegression pipeline](images/Multi-Feature-Polynomial-Regressio.png)
+![StandardScaler + PolynomialFeatures + LinearRegression pipeline](images/MultiFeaturePolynomialRegressio.png)
 
 5. **Validation & Performance Metrics**  
    - Evaluate using **K‑fold cross-validation** to obtain robust performance estimates on unseen data.  
