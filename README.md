@@ -126,7 +126,7 @@ The end‑to‑end pipeline follows a standard supervised ML workflow tailored t
 
 #### Sensor Sensitivity to Ethylene Concentration
 
-![Sensitivity plot of TGS2620-3 sensor](images/Sensitivity-Plots.png)
+![Sensitivity plot of TGS2620-3 sensor](images/SensitivityPlots.png)
 
 7. **Model Export & Deployment Potential**  
    - Save the trained model (e.g., using `pickle`) for later use on new sensor readings.  
@@ -187,9 +187,9 @@ jupyter notebook
 
 Open the notebooks roughly in this order for a full run:
 
-1. `1.Outlier_Removal.ipynb`  
-2. `2.Data_Smoothing.ipynb`  
-3. `3.Correlation_Heatmap.ipynb`  
+1. `Outlier_Removal.ipynb`  
+2. `Data_Smoothing.ipynb`  
+3. `Correlation_Heatmap.ipynb`  
 4. `Multi_Feature_Polynomial_Regression.ipynb`  
 5. `PR_With_K-fold_Cross_Validation.ipynb`  
 6. `Sensitivity_Plots.ipynb`  
